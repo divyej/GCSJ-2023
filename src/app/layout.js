@@ -6,11 +6,11 @@ import { Analytics } from '@vercel/analytics/react';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: "GDSC UVPCE",
+  title: "GDSC BIT GCCP Leaderboard",
   image: "https://raw.githubusercontent.com/fenilmodi00/GCCP-Jams/main/public/assets/Screenshot%202023-09-12%20191408.png",
   type: "website",
-  description: "This is the leaderboard for the GDSC UVPCE GCCP Jams.",
-  keywords: ["gccp", "jams", "uvpce", "gdscuvpce"],
+  description: "This is the leaderboard for the GDSC BIT GCCP Jams.",
+  keywords: ["gccp", "jams", "bit", "gdscbit"],
   robots: "index,follow",
 
   // "og:title": "GDSC UVPCE GCCP Leaderboard",

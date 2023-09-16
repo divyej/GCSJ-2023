@@ -12,6 +12,17 @@ function TableIndex() {
   const [EligibleforSwags, setEligibleforSwags] = useState(0);
 
 
+  const tableHeaders = [
+    "Name",
+    "Redemption Status",
+    "Institution",
+    "Completions of both Pathways",
+    "No Courses Completed",
+    "No Skill Badges Completed",
+    "GenAI Game Completed"
+  ];
+  
+
 
   const calculateTotalEligibility = () => {
     let total = 0;
@@ -77,21 +88,22 @@ function TableIndex() {
       </div>
 
       <table className='mx-auto table-fixed m-5  '>
-        <thead className='shadow-md text-sm bg-blue-500 text-gray-200 sticky top-2 z-10'>
-          <tr className='text-center '>
-            <td className="rounded-ss-lg w-80 p-2 border-r-2 border-r-gray-300">Name</td>
-            {/* <td className="p-2 border-r-2 border-r-gray-300">Email</td> */}
-            <td className="p-2 border-r-2 border-r-gray-300">Redemption Status</td>
-            <td className="mob:hidden p-2 px-10 border-r-2 border-r-gray-300">Institution</td>
-            <td className="mob:rounded-se-lg p-2 border-r-2 border-r-gray-300 max-w-[150px]">Completions of both Pathways</td>
-            <td className="mob:hidden p-2 border-r-2 border-r-gray-300 max-w-[150px]">No Courses Completed</td>
-            <td className="mob:hidden p-2 border-r-2 border-r-gray-300 max-w-[150px]">No Skill Badges Completed</td>
-            <td className="mob:hidden rounded-se-lg p-2 max-w-[150px]">GenAI Game Completed</td>
-            {/* <td className="p-2 border-r-2 border-r-gray-300">Enroll Date & Time</td> */}
-            {/* <td className="p-2 border-r-2 border-r-gray-300">Enroll. Status</td> */}
-            {/* <td className='p-2 border-r-2 border-r-gray-300'>Profile URL</td> */}
-          </tr>
-        </thead>
+      <thead className='shadow-md text-sm bg-blue-900 text-gray-200 sticky top-2 z-10'>
+        <tr className='text-center'>
+          {tableHeaders.map((header, index) => (
+            <th
+              key={index}
+              className={`p-2 ${
+                index === 0 ? "rounded-ss-lg w-80" : "mob:hidden rounded-se-lg"
+              } ${
+                index === tableHeaders.length - 1 ? "max-w-[150px]" : ""
+              } border-r-2 border-r-gray-300`}
+            >
+              {header}
+            </th>
+          ))}
+        </tr>
+      </thead>
         <TableBody
           Participationdata={Participationdata}
           setParticipationdata={setParticipationdata}
