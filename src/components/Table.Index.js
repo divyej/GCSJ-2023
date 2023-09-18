@@ -15,8 +15,8 @@ function TableIndex() {
   const tableHeaders = [
     "Name",
     "Redemption Status",
-    "Institution",
     "Completions of both Pathways",
+    "Institution",
     "No Courses Completed",
     "No Skill Badges Completed",
     "GenAI Game Completed"
