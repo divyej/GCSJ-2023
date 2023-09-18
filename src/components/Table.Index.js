@@ -88,22 +88,21 @@ function TableIndex() {
       </div>
 
       <table className='mx-auto table-fixed m-5  '>
-      <thead className='shadow-md text-sm bg-blue-900 text-gray-200 sticky top-2 z-10'>
-        <tr className='text-center'>
-          {tableHeaders.map((header, index) => (
-            <th
-              key={index}
-              className={`p-2 ${
-                index === 0 ? "rounded-ss-lg w-80" : "mob:hidden rounded-se-lg"
-              } ${
-                index === tableHeaders.length - 1 ? "max-w-[150px]" : ""
-              } border-r-2 border-r-gray-300`}
-            >
-              {header}
-            </th>
-          ))}
-        </tr>
-      </thead>
+      <thead className='shadow-md text-sm bg-blue-500 text-gray-200 sticky top-2 z-10'>
+  <tr className='text-center'>
+    {tableHeaders.map((header, index) => (
+      <th
+        key={index}
+        className={`p-2 ${index < 3 ? '' : 'mob:hidden'} ${
+          index === 0 ? 'rounded-ss-lg w-80' : 'mob:rounded-se-lg'
+        } ${index === tableHeaders.length - 1 ? 'max-w-[150px]' : ''} border-r-2 border-r-gray-300`}
+      >
+        {header}
+      </th>
+    ))}
+  </tr>
+</thead>
+
         <TableBody
           Participationdata={Participationdata}
           setParticipationdata={setParticipationdata}
