@@ -41,7 +41,7 @@ export default function Home() {
         <div className="bg-gray-900 text-blue-500 w-full m-auto text-center p-2 flex justify-center items-center">
           <div className=""><Image src="/assets/cloudLg.png" alt="me" width="40" height="40" /></div>
           <p className=''>
-            Google Cloud STUDY JAMS 2023
+            Google Cloud STUDY JAMS 2023- TIER 3 !!!!!!!!!!!!!!!!
           </p>
         </div>
 
