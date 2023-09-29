@@ -41,7 +41,7 @@ export default function Home() {
         <div className="bg-gray-900 text-blue-500 w-full m-auto text-center p-2 flex justify-center items-center">
           <div className=""><Image src="/assets/cloudLg.png" alt="me" width="40" height="40" /></div>
           <p className=''>
-            Congratulations for everyone we have officially crossed Tier 1 !!!!!!!!!!!!!!!!!!
+            Congratulations to everyone we have officially crossed Tier 1 !!!!!!!!!!!!!!!!!!
           </p>
         </div>
 
