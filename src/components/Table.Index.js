@@ -1,16 +1,13 @@
 "use client"
-import React, { useState, useEffect } from 'react'
-import TableBody from './TableBody'
-import dataArr from '../../public/data.json'
-// import Speedometer from './Speedometer';
+import React, { useState, useEffect } from 'react';
+import TableBody from './TableBody';
+import dataArr from '../../public/data.json';
 
 function TableIndex() {
-  // JSON file gone print here 
   const imported_data = JSON.stringify(dataArr);
   const data = JSON.parse(imported_data);
-  const [Participationdata, setParticipationdata] = useState([...data]);
+  const [Participationdata, setParticipationdata] = useState([]);
   const [EligibleforSwags, setEligibleforSwags] = useState(0);
-
 
   const tableHeaders = [
     "Name",
@@ -21,33 +18,32 @@ function TableIndex() {
     "No Skill Badges Completed",
     "GenAI Game Completed"
   ];
-  
-
 
   const calculateTotalEligibility = () => {
-    let total = 0;
-    data.forEach((ele) => {
-      ele["Total Completions of both Pathways"] == "Yes" && total++;
-    })
-    setEligibleforSwags(total)
+    const eligibleParticipants = data.filter(
+      (participant) => participant["Total Completions of both Pathways"] === "Yes"
+    );
+    setEligibleforSwags(eligibleParticipants.length);
   }
 
   const searchname = (name) => {
-    const newArr = [];
-    for (let i = 0; i < data.length; i++) {
-      let participant = data[i]["Student Name"].toLowerCase();
-      let match = participant.includes(name.toLowerCase());
-      if (match) newArr.push(data[i]);
-
-    }
-    // console.log(newArr);
-    setParticipationdata(newArr);
+    const filteredParticipants = data.filter((participant) => {
+      return (
+        participant["Total Completions of both Pathways"] === "Yes" &&
+        participant["Student Name"].toLowerCase().includes(name.toLowerCase())
+      );
+    });
+    setParticipationdata(filteredParticipants);
   }
-
 
   useEffect(() => {
     calculateTotalEligibility();
-  }, [])
+    // Initially, set the Participationdata to only contain eligible participants.
+    const initialEligibleParticipants = data.filter(
+      (participant) => participant["Total Completions of both Pathways"] === "Yes"
+    );
+    setParticipationdata(initialEligibleParticipants);
+  }, []);
 
 
   return (
