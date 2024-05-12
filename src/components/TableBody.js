@@ -11,7 +11,7 @@ function TableBody({ Participationdata,
         <tbody className='text-xs '>
             {Participationdata.length > 0 ? Participationdata.map((participant, index) => {
 
-                return <TableRow key={participant["Student Email"] || 1} participant={participant} />
+                return <TableRow key={participant["User Email"] || 1} participant={participant} />
             }) : <div className='text-lg'>No Data Found</div>}
         </tbody >
     )

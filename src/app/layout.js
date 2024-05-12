@@ -6,10 +6,10 @@ import { Analytics } from '@vercel/analytics/react';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: "GDSC BIT GCCP Leaderboard",
+  title: "GDSC BIT GenAi Leaderboard",
   image: "https://raw.githubusercontent.com/fenilmodi00/GCCP-Jams/main/public/assets/Screenshot%202023-09-12%20191408.png",
   type: "website",
-  description: "This is the leaderboard for the GDSC BIT GCCP Jams.",
+  description: "This is the leaderboard for the GDSC BIT Gen Jams.",
   keywords: ["gccp", "jams", "bit", "gdscbit"],
   robots: "index,follow",
 
