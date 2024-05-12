@@ -41,7 +41,7 @@ export default function Home() {
         <div className="bg-gray-900 text-blue-500 w-full m-auto text-center p-2 flex justify-center items-center">
           <div className=""><Image src="/assets/cloudLg.png" alt="me" width="40" height="40" /></div>
           <p className=''>
-            Congratulations to everyone we have officially crossed Tier 1 !!!!!!!!!!!!!!!!!!
+             Gen AI Study Jam Leaderboard
           </p>
         </div>
 
@@ -51,7 +51,7 @@ export default function Home() {
               <Image src="/assets/gdsc-logo.png" alt="me" width="64" height="64" />
             </div>
             <div className="text flex flex-col justify-start items-start">
-              <p className="text-base">Google Devloper Student Club</p>
+              <p className="text-base">Google Developer Students Club</p>
               <p className="text-xs"> Bangalore Institute of Technology</p>
 
             </div>
