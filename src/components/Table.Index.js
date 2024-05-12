@@ -14,7 +14,6 @@ function TableIndex() {
 
   const tableHeaders = [
     "Name",
-
     "All 3 Pathways Completed ",
     "Prompt Design in Vertex AI",
     "Develop GenAI with Gemini",
